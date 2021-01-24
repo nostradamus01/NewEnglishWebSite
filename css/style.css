@@ -53,6 +53,7 @@ body{
     background-color: var(--main-window-background);
     border-radius: 30px;
     overflow: hidden;
+    display: flex;
 }
 
 .account-panel{
