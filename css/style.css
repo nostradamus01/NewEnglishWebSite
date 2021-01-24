@@ -10,7 +10,6 @@
     --main-window-background: rgba(128, 0, 128, 0.5);
     --account-panel-background: rgba(31, 173, 192, 0.4);
 
-
     --white: #fff;
     --black: #000;
 
@@ -28,6 +27,7 @@ body{
 
 .app{
     height: 100%;
+    min-height: 600px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -57,10 +57,10 @@ body{
 }
 
 .account-panel{
-    width: 300px;
+    width: 240px;
     height: 100%;
     background-color: var(--account-panel-background);
-    
+    position: relative;
 }
 
 .account-logo{
@@ -108,7 +108,31 @@ body{
     border-bottom: 1px solid gray;
 }
 
+.settings-logo{
+    height: 30px;
+    width: 30px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    cursor: pointer;
+}
+
+.settings-logo svg{
+    display: block;
+    height: 100%;
+    width: 100%;
+    fill: rgba(140, 0, 255, 0.432);
+}
 
 
 
-/* @media max-widht: */
+
+@media screen and (max-width: 600px) {
+    .app{
+        padding: 0;
+    }
+    .main-window{
+        border-radius: 0;
+
+    }
+  }
