@@ -51,16 +51,22 @@ body{
     height: 100%;
     width: 100%;
     background-color: var(--main-window-background);
-    border-radius: 30px;
+    border-radius: 10px;
     overflow: hidden;
     display: flex;
 }
 
 .account-panel{
-    width: 240px;
+    max-width: 240px;
     height: 100%;
+    width: 100%;
     background-color: var(--account-panel-background);
     position: relative;
+    transition: all 500ms ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .account-logo{
@@ -100,29 +106,126 @@ body{
 }
 
 .logo-panel{
-    height: 200px;
+    height: 300px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0 30px;
-    border-bottom: 1px solid gray;
+    /* margin: 0 30px; */
+    /* border-bottom: 1px solid gray; */
 }
 
-.settings-logo{
-    height: 30px;
-    width: 30px;
+.user-name{
+    padding: 20px;
+    font-size: 20px;
+}
+
+.hr{
+    display: block;
+    height: 1px;
+    width: 80%;
+    background-color: gray;
+    /* margin: 30px 0; */
+}
+
+.logo-svg{
+    height: 24px;
+    width: 24px;
     /* display: flex;
     justify-content: center;
     align-items: center; */
     cursor: pointer;
 }
 
-.settings-logo svg{
+.logo-svg svg{
     display: block;
     height: 100%;
     width: 100%;
-    fill: rgba(140, 0, 255, 0.432);
+    fill: rgba(160, 177, 180, 0.700);
 }
+
+.logo-bar{
+    display: flex;
+    /* position: absolute; */
+    align-items: center;
+    height: 50px;
+    width: 240px;
+    padding-left: 20px; 
+    cursor: pointer;
+}
+
+.logo-bar:hover{
+    background-color:rgba(31, 173, 192, 0.1);
+}
+
+.logo-text{
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 30px;
+    color: rgba(160, 177, 180, 0.700);
+    text-transform: uppercase;
+}
+
+/* .menu-bar{
+    top: 20px;
+    left: 20px;
+}    */
+
+.menu-logo{
+    height: 22px;
+}
+
+.account-panel.closed{
+    /* transform-origin: center left; */
+    max-width: 66px;
+    transition: all 500ms ease;
+}
+
+.menu-text-panel{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--account-panel-background);
+    /* transform: translateX(0);  */
+    transition: all 500ms ease;
+    overflow: hidden;
+}
+
+.menu-text-panel p{
+    padding: 20px 30px 20px 0;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.menu-text-panel p:hover{
+    background-color:rgba(31, 173, 192, 0.1);
+}
+
+.menu-text-panel.closed{
+    transform: translateX(-101%);
+    transition: all 500ms ease;
+}
+
+.text-menu-box{
+    overflow: hidden;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -133,6 +236,6 @@ body{
     }
     .main-window{
         border-radius: 0;
-
     }
-  }
+}
+
